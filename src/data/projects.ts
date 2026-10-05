@@ -17,6 +17,10 @@ export type Project = {
 
 export const projectFilters = ["All", "E-commerce", "Web Apps"] as const;
 
+export const projectsHeading = "Selected Work" as const;
+export const projectsIntro =
+  "Live products and client builds — from e-commerce to booking platforms." as const;
+
 export const projects: Project[] = [
   {
     slug: "focus-blade",

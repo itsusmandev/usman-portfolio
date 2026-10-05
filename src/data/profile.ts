@@ -11,6 +11,7 @@ export const profile = {
   photo: "/images/profile.jpg",
   roles: ["MERN Developer", "Next.js Engineer", "E-commerce Builder"],
   aboutHeading: "Building products that look sharp and ship fast",
+  aboutSignal: "Code × product × brand",
   stats: [
     { label: "Years Experience", value: 3 },
     { label: "Projects Shipped", value: 15 },

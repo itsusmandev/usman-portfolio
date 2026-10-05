@@ -3,6 +3,12 @@ export type SkillGroup = {
   items: readonly string[];
 };
 
+export const skillsHeading =
+  "Tools I use to design, build, and ship" as const;
+
+export const skillsIntro =
+  "A focused stack for fast interfaces, solid APIs, and reliable deploys." as const;
+
 export const skills: readonly SkillGroup[] = [
   {
     title: "Frontend",
