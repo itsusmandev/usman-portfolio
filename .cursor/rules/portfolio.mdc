@@ -1,0 +1,16 @@
+---
+description: Portfolio build rules from PORTFOLIO_BRIEF
+alwaysApply: true
+---
+
+You are building a Next.js (App Router) + TypeScript + Tailwind + React Three Fiber portfolio.
+
+- Follow PORTFOLIO_BRIEF.pdf strictly. Ask before deviating.
+- TypeScript strict. No `any`. Prefer server components; add "use client" only when needed.
+- All content comes from /src/data. No hardcoded personal text in components.
+- Three.js code lives only in /src/components/three and is dynamically imported (ssr:false).
+- Respect prefers-reduced-motion and mobile performance rules.
+- Use Tailwind utilities + CSS variables for theme tokens. No inline styles unless dynamic.
+- Check latest docs for Next.js / Tailwind / R3F before configuring. Do not guess APIs.
+- After each phase: run `npm run lint` and `npm run build`, fix errors, then summarize what was done.
+- Keep components small, accessible, and typed. Reuse ui/ primitives.

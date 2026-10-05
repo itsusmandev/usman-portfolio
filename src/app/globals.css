@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f4f6f8;
+  --surface: #ffffff;
+  --border: rgba(15, 23, 32, 0.1);
+  --text: #0f1720;
+  --muted: #5b6675;
+  --accent: #0f766e;
+  --accent-2: #0369a1;
+  --glow: rgba(15, 118, 110, 0.18);
+}
+
+.dark {
+  --background: #070b10;
+  --surface: #0f1620;
+  --border: rgba(232, 238, 246, 0.1);
+  --text: #e8eef6;
+  --muted: #8b97a8;
+  --accent: #2dd4bf;
+  --accent-2: #38bdf8;
+  --glow: rgba(45, 212, 191, 0.22);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+  --radius-card: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 35%, transparent);
+}
+
+.bg-atmosphere {
+  background:
+    radial-gradient(ellipse 80% 50% at 15% -10%, var(--glow), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 90% 10%, color-mix(in oklab, var(--accent-2) 18%, transparent), transparent 50%),
+    radial-gradient(ellipse 50% 30% at 50% 100%, color-mix(in oklab, var(--accent) 10%, transparent), transparent 60%);
+}
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
