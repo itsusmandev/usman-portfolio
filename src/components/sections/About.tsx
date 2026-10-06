@@ -55,7 +55,7 @@ export function About() {
         className="pointer-events-none absolute inset-0 -z-10"
       >
         <div className="absolute top-0 left-0 h-px w-full bg-linear-to-r from-transparent via-border to-transparent" />
-        <div className="absolute top-24 -left-20 font-heading text-[clamp(6rem,22vw,16rem)] leading-none font-bold tracking-tighter text-text/[0.035] select-none">
+        <div className="absolute top-24 -left-20 font-heading text-[clamp(6rem,22vw,16rem)] leading-none font-bold tracking-tighter text-text/4 select-none">
           {profile.name.toUpperCase()}
         </div>
       </div>
@@ -108,7 +108,7 @@ export function About() {
 
         <div
           className={cn(
-            "relative mx-auto h-[22rem] w-[min(100%,72rem)] overflow-hidden md:h-[28rem]",
+            "relative mx-auto h-88 w-[min(100%,72rem)] overflow-hidden md:h-112",
             "[clip-path:polygon(4%_0,100%_0,96%_100%,0_100%)] md:[clip-path:polygon(6%_0,100%_0,94%_100%,0_100%)]",
           )}
         >
