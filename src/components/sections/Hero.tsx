@@ -37,7 +37,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[100svh] items-center overflow-hidden pt-24 md:pt-28"
+      className="relative flex min-h-svh items-center overflow-hidden pt-24 md:pt-28"
     >
       <div className="pointer-events-none absolute inset-0">
         <HeroScene />
@@ -136,7 +136,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <div aria-hidden="true" className="hidden min-h-[22rem] lg:block" />
+        <div aria-hidden="true" className="hidden min-h-88 lg:block" />
       </div>
 
       <a

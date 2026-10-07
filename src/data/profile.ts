@@ -1,3 +1,5 @@
+import { Dog } from "lucide-react";
+
 export const profile = {
   name: "Usman",
   role: "Full-Stack Developer (MERN)",
